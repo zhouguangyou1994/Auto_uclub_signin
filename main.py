@@ -50,6 +50,9 @@ def signin(session):
 
 
 if __name__ == '__main__':
+    if not USERNAME or not PASSWORD:
+        print("你没有添加账户")
+        exit(1)
     s = login()
     if not s:
         print("登陆失败，请检查你的登录信息是否准确")
